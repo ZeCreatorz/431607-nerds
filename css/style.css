@@ -11,7 +11,7 @@
 }
 
 .main-header {
-	margin-bottom: 75px;
+	margin-bottom: 80px;
 	background-color: #eeeeee;
 }
 
@@ -19,42 +19,65 @@ a {
 	text-decoration: none;
 }
 
-.main-navigation {
+.main-header-logo img:hover {
+	opacity: 0.8;
+}
+
+.main-header-logo img:active {
+  opacity: 0.3;
+}
+
+.main-header-logo {
+
+}
+
+.main-navigation,
+.basket-link a {
 	display: flex;
-	min-height: 545px;
+	justify-content: space-between;
+	align-items: flex-start;
 	font-size: 16px;
 	line-height: 30px;
 	font-weight: 500;
+    padding-bottom: 3px;
 	color: #000000;
 	text-transform: uppercase;
 
 	background-color: #eeeeee;
 }
 
+.site-navigation {
+	display: flex;
+}
+
 .site-navigation,
-.user-navigation {
+.basket-link a {
 	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.link-current {
+ border-bottom: 2px solid #fb565a;
 }
 
 .site-navigation a,
-.user-navigation a {
+.basket-link a {
 	color: #000000;
 }
 
-
 .site-navigation a:focus,
-.user-navigation a:focus {
+.basket-link a:focus {
 	color: #fb565a;
-	text-decoration: underline;
 }
 
 .site-navigation a:hover,
-.user-navigation a:hover {
+.basket-link a:hover {
 	color: #fb565a;
 }
 
 .site-navigation a:active,
-.user-navigation a:active {
+.basket-link a:active {
 	color: #bdbdbd;
 }
 
@@ -223,7 +246,7 @@ a {
 	color: red;
 }
 
-caption {
+.about-table caption {
 	caption-side: top;
 	font-size: 16px;
 	line-height: 24px;
@@ -233,14 +256,13 @@ caption {
 }
 
 
-th {
+.about-table th {
 	color: #000000;
 	font-size: 45px;
-	line-height: 10px;
 	font-weight: 700;
 }
 
-td {
+.about-table td {
    color: #283136;
    font-size: 16px;
    line-height: 18px;
@@ -287,27 +309,42 @@ td {
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 400;
-	color: #a6a6a6;
+	color: #283136;
 }
 
-.filter-input:hover + label,
-.filter-input:focus + label {
+.filter-input:hover + label {
 	color: #000000;
 }
 
 .filter-input:disabled + label {
-  color: #ededed;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .filter-button {
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: 500;
+	text-align: center;
+	vertical-align: middle;
+	color: #000000;
 	text-transform: uppercase;
 
 	background-color: #eeeeee;
+	order: none;
+	border-radius: 3px;
 }
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: #dfdfdf;
+}
+
+.filter-button:active {
+  background-color: #d5d5d5;
+  color: #a9a9a9;
+  box-shadow: inset 0 3px 0 0 #bfbfbf;
+}
+
 
 .sort h2 {
 	font-size: 18px;
@@ -317,25 +354,25 @@ td {
 	color: #000000;
 }
 
-.sort-list {
+.sort-link {
 	font-size: 14px;
 	line-height: 18px;
 	font-weight: 400;
+	color: #000000;
+	opacity: 0.3;
 	text-transform: uppercase;
 }
 
-.sort-list:hover {
-	color: #000000;
-	opacity: 0.5;
-}
-
-.sort-list:focus {
+.sort-link:hover,
+.sort-link:focus {
    color: #000000;
-   opacity: 0.2;
+   opacity: 0.6;
 }
 
-.sort-list:active {
-	color: #000000;
+
+.sort-link:active,
+.sort-list .active {
+  color: #000000;
 }
 
 .catalog-item-price {
@@ -354,7 +391,15 @@ td {
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: 400;
-	color: #000000;
+	color: #666666;
+}
+
+.catalog-item-price h3 a {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
 }
 
 .catalog-item-button:hover {
@@ -374,14 +419,27 @@ td {
 	color: #000000;
 	background-color: #eeeeee;
 	border-radius: 2px;
+	border: 2px solid #eeeeee;
 }
 
 .pagination-item:hover {
 	background-color: #dfdfdf;
 }
 
-.current {
-	background-color: #ffffff;
+.pagination-link:hover,
+.pagination-link:focus {
+  background-color: #dfdfdf;
+  border-color: #dfdfdf;
+}
+
+.pagination-link:active {
+  background-color: #d5d5d5;
+  border: none;
+  box-shadow: inset 0 3px 0 0 #bfbfbf;
+}
+
+.pagination-list .current {
+	background-color: transparent;
 	border: 2px solid #dbdbdb;
 }
 
@@ -423,11 +481,13 @@ td {
 	border-radius: 3px;
 }
 
-.contact-button:hover {
+.contact-button:hover,
+.send-button:hover {
 	background-color: #e74246;
 }
 
-.contact-button:active {
+.contact-button:active,
+.send-button:active {
 	background-color: #d7373b;
     box-shadow: inset 0 3px rgba(0,1,1,0.1);
 }
@@ -468,6 +528,10 @@ td {
 	font-size: 45px;
 	line-height: 45px;
 	font-weight: 700;
+	color: #000000;
+}
+
+.modal-button {
 	color: #000000;
 }
 

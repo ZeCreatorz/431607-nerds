@@ -7,21 +7,21 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="catalog-page">
+<body>
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo">
         <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип «Нёрдс»">
       </a>
+      <div class="main-navigation-wrapper">
       <ul class="site-navigation">
         <li><a href="#">Студия</a></li>
         <li><a href="#">Клиенты</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
+        <li><a class="link-current" href="catalog.html">Магазин</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
-      <ul class="user-navigation">
-        <li><div class="user-navigation"><a class="basket-link" href="#">Корзина</a></div></li>
-      </ul>
+      <a class="basket-link" href="#">Корзина</a>
+    </div>
     </nav>
     <section class="slider">
       <h2 class="visually-hidden">Преимущества</h2>
@@ -174,7 +174,7 @@
       <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="contact-item">
           <label class="visually-hidden" for="contact-name">Ваше имя:</label>
-          <input id="contact-name" type="text" name="name" placeholder="Имя Фамилия" required>
+          <input id="contact-name" type="text" name="name" placeholder="Имя Фамилия" required autofocus>
         </p>
         <p class="contact-item">
           <label class="visually-hidden" for="contact-email">Ваш email:</label>
