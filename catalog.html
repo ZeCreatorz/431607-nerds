@@ -13,13 +13,17 @@
       <a class="main-header-logo" href="index.html">
         <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип «Нёрдс»">
       </a>
+      <div class="main-navigation-wrapper">
+        <div class="container">
       <ul class="site-navigation">
-        <li><a href="#">Студия</a></li>
-        <li><a href="#">Клиенты</a></li>
+        <li><a class="menu-link" href="#">Студия</a></li>
+        <li><a class="menu-link" href="#">Клиенты</a></li>
         <li><a class="site-navigation-current">Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a class="menu-link" href="#">Контакты</a></li>
       </ul>
-        <a class="basket-link" href="#">Корзина</a>
+        <a class="basket" href="#">Корзина</a>
+      </div>
+      </div>
     </nav>
     <h1 class="page-title">Магазин готовых шаблонов</h1>
   </header>
@@ -27,14 +31,25 @@
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset>
+        <fieldset class="filter-item">
           <legend>Стоимость:</legend>
-          <label>Цена</label>
-          <input type="range" name="price" min="0" max="15000" step="1000" id="price">
-        </fieldset>
+        <div class="range-filter">
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar" style="margin-left: 20%; width: 30%"></div>
+            </div>
+            <div class="toggle toggle-min"></div>
+            <div class="toggle toggle-max"></div>
+          </div>
+          <div class="price-controls">
+            <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+            <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+          </div>
+        </div>
+      </fieldset>
         <fieldset>
           <legend>Сетка:</legend>
-          <ul>
+          <ul class="layout-list">
             <li class="filter-option">
               <input class="visually-hidden filter-input filter-input-radio" id="adapt" type="radio" name="grid" value="adapt" checked>
               <label for="adapt">Адаптивная</label>
@@ -158,11 +173,15 @@
     </section>
   </main>
   <footer class="main-footer">
-    <section class="contacts">
+    <section class="footer-map">
       <h2 class="visually-hidden">Контакты</h2>
+      <div class="container">
+      <div class="contacts">
       <b class="contacts-name">Nёrds design studio</b>
       <p>191186, Санкт-Петербург, <br>ул.Б.Конюшенная,д. 19/8тел. +7(812)275-75-75</p>
       <a class="button contact-button" href="#">Напишите нам</a>
+    </div>
+  </div>
       <img src="img/map.jpg" width="1440" height="416" alt="Каpта проезда">
     </section>
     <section class="social">
@@ -184,12 +203,15 @@
           </a>
         </li>
       </ul>
+      <div class="social-text">
       <b>Давайте дружить, это выгодно!</b>
       <p>Скидка 10% для друзей из социальных сетей.</p>
+    </div>
     </section>
     <section class="modal">
       <h2><a class="modal-button" href="#">Напишите нам</a></h2>
       <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="name-email">
         <p class="contact-item">
           <label class="visually-hidden" for="contact-name">Ваше имя:</label>
           <input id="contact-name" type="text" name="name" placeholder="Имя Фамилия" required autofocus>
@@ -198,7 +220,8 @@
           <label class="visually-hidden" for="contact-email">Ваш email:</label>
           <input id="contact-email" type="email" name="email" placeholder="email@example.com" required>
         </p>
-        <p class="contact-item">
+      </div>
+        <p class="contact-text">
           <label class="visually-hidden" for="contact-text">Текста письма:</label>
           <textarea id="contact-text" name="textarea" placeholder="В свободной форме"></textarea>
         </p>
