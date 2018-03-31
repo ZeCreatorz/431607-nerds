@@ -10,6 +10,12 @@
   background-color: #ffffff;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .main-header {
   margin-bottom: 80px;
   background-color: #eeeeee;
@@ -56,12 +62,6 @@ a {
   margin-left: 200px;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .main-navigation-wrapper .container {
   display: flex;
   justify-content: space-between;
@@ -70,7 +70,7 @@ a {
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 16px;
   line-height: 30px;
   font-weight: 500;
@@ -96,7 +96,7 @@ a {
 }
 
 .link-current {
- border-bottom: 2px solid #fb565a;
+  border-bottom: 2px solid #fb565a;
 }
 
 .site-navigation a {
@@ -111,16 +111,16 @@ a {
   color: #bdbdbd;
 }
 
-a.basket {
+.basket {
   color: #000000;
   list-style: none;
 }
 
-a.basket:hover {
+.basket:hover {
   color: #fb565a;
 }
 
-a.basket:active {
+.basket:active {
   color: #bdbdbd;
 }
 
@@ -128,15 +128,16 @@ a.basket:active {
   list-style: none;
 }
 
+
 .slider-item {
   text-align: center;
 }
 
 .slider-item b {
-    font-size: 55px;
-    line-height: 55px;
-    font-weight: 500;
-    color: #000000;
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: #000000;
 }
 
 .slider-item p {
@@ -155,11 +156,21 @@ a.basket:active {
   line-height: 45px;
 }
 
+.services {
+  margin-bottom: 80px;
+}
+
 .services-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .service-item {
+  width: 300px;
   text-align: center;
 }
 
@@ -171,11 +182,12 @@ a.basket:active {
 }
 
 .service-item p {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    color: #283136;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283136;
 }
+
 
 .more-button {
 
@@ -198,7 +210,7 @@ a.basket:active {
 
 .more-button:active {
   background-color: #d7373b;
-    box-shadow: inset 0 3px rgba(0,1,1,0.1);
+  box-shadow: inset 0 3px rgba(0,1,1,0.1);
 }
 
 .order-button {
@@ -206,7 +218,7 @@ a.basket:active {
   line-height: 18px;
   font-weight: 500;
   color: #ffffff;
-    vertical-align: middle;
+  vertical-align: middle;
   text-transform: uppercase;
 
   background-color: #fb565a;
@@ -215,7 +227,7 @@ a.basket:active {
 }
 
 .service-item:nth-child(2) > .order-button {
-    color: #ffffff;
+  color: #ffffff;
   background-color: #00ca74;
 }
 
@@ -251,7 +263,20 @@ a.basket:active {
   box-shadow: inset 0 3px rgba(0, 1, 1, 0.1);
 }
 
+.about { 
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
 
+.about-column-left {
+  width: 660px;
+
+}
+
+.about-column-right {
+  width: 360px;
+}
 
 .about-list {
   list-style: none;
@@ -307,10 +332,16 @@ a.basket:active {
 }
 
 .about-table td {
-   color: #283136;
-   font-size: 16px;
-   line-height: 18px;
-   font-weight: 400;
+  color: #283136;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.partners {
+  display: flex;
+  justify-content: space-between;
+
 }
 
 .partners-list {
@@ -326,7 +357,7 @@ a.basket:active {
 }
 
 .partners a:active {
-   opacity: 0.1;
+  opacity: 0.1;
 }
 
 .page-title {
@@ -337,7 +368,7 @@ a.basket:active {
   text-align: center;
 }
 
- .container ul {
+.container ul {
   list-style: none;
 }
 
@@ -420,11 +451,11 @@ a.basket:active {
 }
 
 .catalog-item-price h3 {
-     font-size: 18px;
-     line-height: 30px;
-     font-weight: 700;
-     color: #000000;
-     text-transform: uppercase;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
 }
 
 .catalog-item-price p {
@@ -438,8 +469,8 @@ a.basket:active {
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
-    color: #000000;
-    text-transform: uppercase;
+  color: #000000;
+  text-transform: uppercase;
 }
 
 .catalog-item-button:hover {
@@ -448,7 +479,7 @@ a.basket:active {
 
 .catalog-item-button:active {
   background-color: #d7373b;
-    box-shadow: inset 0 3px rgba(0,1,1,0.1);
+  box-shadow: inset 0 3px rgba(0,1,1,0.1);
 }
 
 .pagination-item a {
@@ -483,10 +514,26 @@ a.basket:active {
 }
 
 .main-footer {
+  margin-top: 80px;
   background-color: #ffffff;
 }
 
-.contacts img {
+.footer-contacts {
+  width: 320px;
+
+}
+
+.footer-social {
+  display: flex;
+  with: 260px;
+  margin-right: 140px;
+}
+
+.footer-slogan {
+  margin-left: 140px;
+}
+
+.footer-contacts img {
   width: 1440px;
   height: 416px;
 }
@@ -499,11 +546,11 @@ a.basket:active {
   text-transform: uppercase;
 }
 
-.contacts p {
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 400;
-    color: #666666;
+.footer-contacts p {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #666666;
 }
 
 .button {
@@ -528,7 +575,7 @@ a.basket:active {
 .contact-button:active,
 .send-button:active {
   background-color: #d7373b;
-    box-shadow: inset 0 3px rgba(0,1,1,0.1);
+  box-shadow: inset 0 3px rgba(0,1,1,0.1);
 }
 
 .social-list  {
@@ -549,14 +596,14 @@ a.basket:active {
   fill-opacity: 0.3;
 }
 
-.social b {
+.footer-social b {
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
   color: #000000;
 }
 
-.social p {
+.footer-social p {
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -579,11 +626,11 @@ a.basket:active {
 .modal textarea {
   font-size: 16px;
   line-height: 18px;
-    color: #b7b7b7;
+  color: #b7b7b7;
 
-    background-color: #ffffff;
-    border: 2px solid #d7dcde;
-    border-radius: 2px;
+  background-color: #ffffff;
+  border: 2px solid #d7dcde;
+  border-radius: 2px;
 }
 
 .modal label {
@@ -593,7 +640,7 @@ a.basket:active {
 }
 
 .contact-form input:hover {
-    border-color: #b4b9bb;
+  border-color: #b4b9bb;
 }
 
 .contact-form textarea:hover {
@@ -602,13 +649,13 @@ a.basket:active {
 
 .contact-form input:focus {
   color: #b7b7b7;
-    border-color: #000000;
+  border-color: #000000;
 
 }
 
 .contact-form textarea:focus {
   color: #b7b7b7;
-    border-color: #000000;
+  border-color: #000000;
 }
 
 .send-button {

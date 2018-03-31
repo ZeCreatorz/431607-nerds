@@ -15,15 +15,15 @@
       </a>
       <div class="main-navigation-wrapper">
         <div class="container">
-      <ul class="site-navigation">
-        <li><a href="#">Студия</a></li>
-        <li><a href="#">Клиенты</a></li>
-        <li><a class="link-current" href="catalog.html">Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-      <a class="basket" href="#">Корзина</a>
-    </div>
-    </div>
+          <ul class="site-navigation">
+            <li><a href="#">Студия</a></li>
+            <li><a href="#">Клиенты</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <a class="basket" href="#">Корзина</a>
+        </div>
+      </div>
     </nav>
     <section class="slider">
       <h2 class="visually-hidden">Преимущества</h2>
@@ -92,28 +92,32 @@
     </section>
     <section class="about">
       <h2 class="visually-hidden">Описание студии Nerds</h2>
-      <b class="slogan-about">Мы - маленькая,но гордая дизайн-студия из Краснодара.</b>
-      <p>Исповедуем принципы минимализма и чистоты.Ставим математический расчет превыше креатива.Работаем не покаладая рук,как роботы.</p>
-      <h3>Выполняем заказы на разработку:</h3>
-      <ul class="about-list">
-        <li class="about-item">Веб-сайтов любой сложности</li>
-        <li class="about-item">Мобильных приложений для iOS и Android</li>
-        <li class="about-item">Слайдшоу и видео для корпоративных презентаций</li>
-      </ul>
+      <div class="about-column-left">
+        <b class="slogan-about">Мы - маленькая,но гордая дизайн-студия из Краснодара.</b>
+        <p>Исповедуем принципы минимализма и чистоты.Ставим математический расчет превыше креатива.Работаем не покаладая рук,как роботы.</p>
+        <h3>Выполняем заказы на разработку:</h3>
+        <ul class="about-list">
+          <li class="about-item">Веб-сайтов любой сложности</li>
+          <li class="about-item">Мобильных приложений для iOS и Android</li>
+          <li class="about-item">Слайдшоу и видео для корпоративных презентаций</li>
+        </ul>
+      </div>
+      <div class="about-column-right">
         <img class="about-logo" src="img/nerds-ill.png" width="360" height="208" alt="Логотип дизайн-студии «Нёрдс»">
-      <table class="about-table">
-        <caption class="about-table">С 2004 года любим точность во всем:</caption>
-        <tr>
-          <th class="about-table">146<sup>%</sup></th>
-          <th>100<sup>%</sup></th>
-          <th>50<sup>%</sup></th>
-        </tr>
-        <tr>
-          <td class="about-table">Уровень самоотдачи</td>
-          <td>Соблюдение сроков</td>
-          <td>Минимальная предоплата</td>
-        </tr>
-      </table>
+        <table class="about-table">
+          <caption class="about-table">С 2004 года любим точность во всем:</caption>
+          <tr>
+            <th>146<sup>%</sup></th>
+            <th>100<sup>%</sup></th>
+            <th>50<sup>%</sup></th>
+          </tr>
+          <tr>
+            <td class="about-table">Уровень самоотдачи</td>
+            <td>Соблюдение сроков</td>
+            <td>Минимальная предоплата</td>
+          </tr>
+        </table>
+      </div>
     </section>
     <section class="partners">
       <h2 class="visually-hidden">Портфолио Nerds</h2>
@@ -142,14 +146,14 @@
     </section>
   </main>
   <footer class="main-footer">
-    <section class="contacts">
+    <section class="footer-contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <b class="contacts-name">Nёrds design studio</b>
       <p>191186, Санкт-Петербург, <br>ул.Б.Конюшенная,д. 19/8тел. +7(812)275-75-75</p>
       <a class="button contact-button" href="#">Напишите нам</a>
       <img src="img/map.jpg" width="1440" height="416" alt="Карта проезда">
     </section>
-    <section class="social">
+    <section class="footer-social">
       <h2 class="visually-hidden">Контакты в социальных сетях</h2>
       <ul class="social-list">
         <li class="social-item">
@@ -168,21 +172,23 @@
           </a>
         </li>
       </ul>
-      <b>Давайте дружить, это выгодно!</b>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <div class="footer-slogan">
+        <b>Давайте дружить, это выгодно!</b>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </section>
     <section class="modal">
       <h2><a class="modal-button" href="#">Напишите нам</a></h2>
       <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="contact-item">
+        <p>
           <label class="visually-hidden" for="contact-name">Ваше имя:</label>
           <input id="contact-name" type="text" name="name" placeholder="Имя Фамилия" required autofocus>
         </p>
-        <p class="contact-item">
+        <p>
           <label class="visually-hidden" for="contact-email">Ваш email:</label>
           <input id="contact-email" type="email" name="email" placeholder="email@example.com" required>
         </p>
-        <p class="contact-item">
+        <p>
           <label class="visually-hidden" for="contact-text">Текста письма:</label>
           <textarea id="contact-text" name="textarea" placeholder="В свободной форме"></textarea>
         </p>
